@@ -1,0 +1,127 @@
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1600px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.container .card {
+    position: relative;
+    min-width: 320px;
+    height: 440px;
+    background-color:rgb(19, 19, 19);
+    margin: 30px;
+    border-radius: 20px;
+}
+
+.container .card .box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: rgb(20, 20, 20);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.container .card:hover .box {
+    transform: translateY(-20px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(55deg, #141414, #1b1b1b);
+}
+
+.container .card .box .content {
+    padding: 20px;
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .card .box .content h2{
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(0, 0, 0, 0.07);
+    transition: color 0.3s ease 0s;
+}
+
+.container .card:hover .box .content h2 {
+    color: rgba(0, 0, 0, 0.165);
+}
+
+.container .card .box .content h3 {
+    font-size: 1.65em;
+    z-index: 1;
+    transition: 0.5s;
+    margin-bottom: 10px;
+}
+
+.container .card .box .content p {
+    font-size: 0.95em;
+    font-weight: 300;
+    z-index: 1;
+    transition: 0.5s;
+    letter-spacing: 0.7px;
+}
+
+.container .card .box .content .project-link {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgb(15, 15, 15);
+    margin-top: 15px;
+    border-radius: 5px;
+    color: rgb(191, 191, 191);
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.container .card:hover .box .content .project-link {
+    color: black;
+    background-color: rgb(220, 220, 220);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.badge {
+    border-radius: 5px;
+    padding: 3.5px;
+    font-weight: 600;
+    font-size: 0.8em;
+    letter-spacing: 0.4px;
+    margin-top: 15px;
+    width: fit-content;
+    display: block;
+}
+
+.badge-finished {
+    background-color: green;
+    color: white;
+}
+
+.badge-in-progress {
+    background-color: orange;
+    color: black;
+}

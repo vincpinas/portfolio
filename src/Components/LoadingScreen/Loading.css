@@ -1,0 +1,100 @@
+.loadingContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(28, 28, 28);
+}
+
+.lettersLogo {
+    text-shadow: -1px 0 0px #4d43ff, 0 1px 0px #6961ff, -2px 1px 0px #4d43ff, -1px 2px 0px #6961ff, -3px 2px 0px #4d43ff, -2px 3px 0px #6961ff, -4px 3px 0px #4d43ff, -3px 4px 0px #6961ff, -5px 4px 0px #4d43ff, -4px 5px 0px #6961ff, -6px 5px 0px #4d43ff, -5px 6px 15px #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.7rem;
+    display: flex;
+}
+
+#letterLogo1 {
+    transform: rotateX(20deg) rotateY(30deg) rotateZ(-20deg);
+    transition: all 0.8s;
+    animation: letter-animation-1 3s infinite;
+}
+
+#letterLogo2 {
+    transform: rotateX(-20deg) rotateY(-23deg) rotateZ(20deg);
+    transition: all 0.8s;
+    animation: letter-animation-2 3.3s infinite;
+}
+
+.loadingText {
+    color: #808080;
+    font-size: 13.5px;
+}
+
+.loadingText .quotee {
+    margin-top: 3px;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+}
+
+.progress-bar {
+    margin-top: 1.4rem;
+    width: 400px;
+    height: 2px;
+    background-color: #4c43ff8a;
+    overflow: hidden;
+}
+
+.progressMove {
+    height: 100%;
+    width: 100%;
+    background-color: #6961ff;
+    animation: progressMove 2s ease-in-out;
+}
+
+@keyframes progressMove {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes letter-animation-1 {
+    0% {
+        transform: translateY(-20px) rotateX(18deg) rotateY(23deg) rotateZ(-20deg);
+    }
+
+    50% {
+        transform: translateY(0px) rotateX(30deg) rotateY(23deg) rotateZ(-10deg);
+    }
+
+    100% {
+        transform: translateY(-20px) rotateX(20deg) rotateY(23deg) rotateZ(-20deg);
+    }
+}
+
+@keyframes letter-animation-2 {
+    0% {
+        transform: translateY(-7px) rotateX(-20deg) rotateY(-23deg) rotateZ(20deg);
+    }
+
+    50% {
+        transform: translateY(0px) rotateX(-20deg) rotateY(-23deg) rotateZ(20deg);
+    }
+
+    100% {
+        transform: translateY(-7px) rotateX(-20deg) rotateY(-23deg) rotateZ(20deg);
+    }
+}
+
+@media (max-width: 440px) {
+    .progress-bar {
+        width: 250px;
+    }
+}

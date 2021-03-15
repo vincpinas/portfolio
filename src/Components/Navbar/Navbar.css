@@ -1,0 +1,153 @@
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #111111;
+}
+
+.menu-bars {
+    margin-left: 1rem;
+    color: #dddddd;
+    font-size: 1.6rem;
+    background: none;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    left: 0;
+    transition: all .5s ease-in-out;
+}
+
+.menu-bars:hover {
+    color: #4d43ff;
+}
+
+.nav-menu {
+    background-color: #111111;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: all .9s;
+    z-index: 1000;
+}
+
+.nav-menu.active {
+    left: 0;
+    position: fixed;
+}
+
+.nav-menu-item {
+    height: 20px;
+}
+
+.nav-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    padding: 20px 5px 5px 16px;
+}
+
+.activeNavLink{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    padding: 20px 5px 5px 16px;
+}
+
+.nav-text a {
+    text-decoration: none;
+    color: #dddddd;
+    font-size: 18.5px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+    transition: all .5s;
+    padding: 10px 10px 10px 10px;
+}
+
+.activeNavLink a {
+    text-decoration: none;
+    color: #4d43ff;
+    font-size: 18.5px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+    transition: all .5s;
+    padding: 10px 10px 10px 10px;
+}
+
+.nav-text a:hover {
+    background-color: #2b2b2b;
+}
+
+.nav-menu-items {
+    width: 100%;
+}
+
+.nav-bar-toggle {
+    background-color: #131313;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-menu-items li span {
+    margin-left: 16px;
+}
+
+.NavSocials {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 2rem;
+    align-items: center;
+}
+
+.NavSocialLink {
+    color: #d8d8d8;
+    transition: all .35s ease-in-out;
+    font-size: 1.36rem;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.NavSocialLink span {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+#Discord:hover {
+    color: #716aff;
+    text-shadow: 0 0 10px #716aff;
+}
+
+#Github:hover {
+    color: #808080;
+    text-shadow: 0 0 10px #808080;
+}
+
+#Paypal {
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+#Paypal:hover {
+    color: #3939c4;
+    text-shadow: 0 0 3px #3939c4;
+}

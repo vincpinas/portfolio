@@ -1,0 +1,163 @@
+.c--popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.466);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.popup-inner {
+    animation: popupFadeIn 1s;
+    position: relative;
+    padding: 50px;
+    width: 100%;
+    max-width: 640px;
+    color: rgb(201, 201, 201);
+    background-color: rgb(22, 22, 22);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-inner .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    margin: 5px 5px 0px 0px;
+    font-size: 0.9em;
+    background: none;
+    outline: none;
+    color: rgb(201, 201, 201);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.popup-inner .close-btn:hover {
+    color: #4d43ff;
+}
+
+.popup-main {
+    display: flex;
+}
+
+.popup-headers {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.popup-img {
+    margin-right: 2rem;
+    width: 240px;
+    height: 240px;
+}
+
+.popup-text h3 {
+    margin-bottom: 0.2rem;
+}
+
+.popup-margetop {
+    margin-top: 1.2rem;
+}
+
+.popup-link {
+    display: inline-block;
+    padding: 8px 20px;
+    background: rgb(15, 15, 15);
+    border-radius: 5px;
+    color: rgb(191, 191, 191);
+    text-decoration: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: fit-content;
+}
+
+.popup-link:hover {
+    color: black;
+    background-color: rgb(187, 187, 187);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.technologies-header {
+    margin-top: 2.2rem;
+    text-align: center;
+}
+
+.popup-technologies {
+        width: 100%;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(4, minmax(50px, 1fr));
+        text-align: center;
+}
+
+.popup-technology {
+    margin-top: 3px;
+    color: rgb(38, 114, 255);
+    font-weight: 600;
+}
+
+.popup-technology:hover {
+    margin-top: 3px;
+    color: rgb(2, 82, 231);
+    text-decoration: underline;
+}
+
+@keyframes popupFadeIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0.1;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 550px) {
+    .popup-main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .popup-text {
+        margin-top: 1.2rem;
+    }
+
+    .popup-headers {
+        font-size: 0.8em;
+    }
+
+    .popup-img {
+        width: 200px;
+    }
+
+    .popup-inner {
+        height: 100vh;
+    }
+
+    .popup-text {
+        font-size: 0.9em;
+    }
+
+    .popup-technologies {
+        display: none;
+    }
+
+    .technologies-header {
+        display: none;
+    }
+}

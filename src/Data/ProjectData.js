@@ -15,6 +15,21 @@ const ProjectData = [
     //     technologies: {tech1: ""}
     // },
     {
+        title: "Manga.ly",
+        number: "03",
+        introduction: "Simple manga reading/sharing web app.",
+        status: "in-progress",
+        status_txt: "In Progress",
+        team: "Solo Project",
+        icon: "📚",
+        img_src: "http://30472.hosts1.ma-cloud.nl/portfolio/images/YCbCr.gif",
+        explanation: "This project makes use of vanilla PHP and react for the view to make a simple, easy to use but powerful reading web app.",
+        learned: "In this project a got introduced to OOP in PHP with Classes which I used for Multiple API's I also made myself a little more familiar with SQL databases.",
+        links: {github: "https://github.com/vincpinas/Manga.ly-F2M4BO", live: "#"},
+        target: "_blank",
+        technologies: {tech1: "PHP", tech2: "React.js", tech3: "TypeScript", tech4: "Node.js"}
+    },
+    {
         title: "TS Chat",
         number: "02",
         introduction: "A web chat app to chat around with your friends",

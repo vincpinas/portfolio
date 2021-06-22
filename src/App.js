@@ -20,7 +20,7 @@ const App = () => {
   // Loading Screen
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2860);
+    setTimeout(() => setLoading(false), 2870);
   }, [])
 
   // Main App
@@ -39,7 +39,7 @@ const App = () => {
         </Switch>
       </Router>
       ) : (
-        <LoadingScreen/>
+        <LoadingScreen loading={loading}/>
       )}
     </>
   );

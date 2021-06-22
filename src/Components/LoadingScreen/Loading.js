@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Loading.css'
 import loadingTextData from '../../Data/LoadingTextData'
 
@@ -15,7 +15,19 @@ if (quoteObject.quotee === "") {
     quoteeAvailable = false
 }
 
-const LoadingScreen = () => {
+const LoadingScreen = (props) => {
+    const [loadStateText, setLoadStateText] = useState(["loading dynos", "eating chips", "cleaning up"]);
+
+    useEffect(() => {
+        let temp = [...loadStateText]
+        const interval = setInterval(() => {
+            temp.splice(0, 1)
+            setLoadStateText([...temp])
+        }, 1000)
+
+        return () => clearInterval(interval)
+    }, [props.loading, loadStateText])
+
     return (
         <div className="loadingContainer">
             <div className="lettersLogo">
@@ -29,8 +41,9 @@ const LoadingScreen = () => {
             <div className="progress-bar">
                 <div className="progressMove"></div>
             </div>
+            <p className="loadingText">{props.loading ? loadStateText[0] : null}...</p>
         </div>
     )
 }
 
-export default LoadingScreen 
+export default LoadingScreen;

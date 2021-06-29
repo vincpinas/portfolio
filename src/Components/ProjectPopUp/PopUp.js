@@ -21,8 +21,8 @@ function ProjectPopUp(props) {
                     </div>
                 </div>
                 <a className="popup-link" href={props.ProjectData.links.github} target={props.ProjectData.target} rel="noreferrer">Check The Code!</a>
-                <a className="popup-link" href={props.ProjectData.links.live} target={props.ProjectData.target} rel="noreferrer">Test It Live!</a>
-                <h3 className="technologies-header">Technologies used</h3>
+                {props.ProjectData.live_status ? <a className="popup-link" href={props.ProjectData.links.live} target={props.ProjectData.target} rel="noreferrer">Test It Live!</a> : null }
+                <h3 className="technologies-header">Skills used</h3>
                 <div className="popup-technologies">
                     {Object.values(props.ProjectData.technologies).map((technology, index) => {
                         return (
